@@ -48,7 +48,7 @@ export function NewHabitForm() {
         type="text"
         id="title"
         placeholder="Exercícios, dormir bem, etc..."
-        className="p-4 rounded-lg mt-12 bg-zinc-800 text-white placeholder:text-zinc-400"
+        className="p-4 rounded-lg mt-3 bg-zinc-800 text-white placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-zinc-900"
         autoFocus
         value={title}
         onChange={event => setTitle(event.target.value)}
@@ -63,7 +63,7 @@ export function NewHabitForm() {
           return(
             <Checkbox.Root
               key={weekDay}
-              className='flex items-center gap-3 group'
+              className='flex items-center gap-3 group focus:outline-none'
               checked={weekDays.includes(index)}
               onCheckedChange={() => handleToggleWeekDay(index)}
             >
@@ -87,8 +87,8 @@ export function NewHabitForm() {
       </div>
 
       <button 
-        type="submit"
-        className="mt-6 rounded-lg p-4 gap-3 flex items-center justify-center font-semibold bg-green-600 hover:bg-green-500"
+        type="submit" 
+        className="mt-6 rounded-lg p-4 flex items-center justify-center gap-3 font-semibold bg-green-600 hover:bg-green-500 transition-colors focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 focus:ring-offset-zinc-900"
       >
         <Check size={20} weight="bold"/>
         Confirmar

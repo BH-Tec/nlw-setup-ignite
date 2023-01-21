@@ -63,10 +63,9 @@ export async function appRoutes(app: FastifyInstance) {
       }
     })
 
-    //TODO: mandar no grupo do discord o erro
     const completedHabits = day?.dayHabits.map(dayHabit => {
       return dayHabit.habit_id
-    })
+    }) ?? []
 
     return {
       possibleHabits,
