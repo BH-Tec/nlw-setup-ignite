@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "ab4ee959-b415-44aa-b02f-a8e39474d2ab",
+		"name": "NLW Setup - Ignite",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20302941"
+	},
+	"item": [
+		{
+			"name": "Create Habit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Exemplo 1\",\r\n    \"weekDays\": [0,1,2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/habits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"habits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Day",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/day?date=2023-01-20T13:00:00.000z",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"day"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2023-01-20T13:00:00.000z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Summary",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/summary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Toogle Habit",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/habits/0730ffac-d039-4194-9571-01aa2aa0efbd/toogle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"habits",
+						"0730ffac-d039-4194-9571-01aa2aa0efbd",
+						"toogle"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
